@@ -19,10 +19,66 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+    const profileImg = document.getElementById("profile-img");
+    const profileSourceDark = document.getElementById("profile-source-dark");
+    const profileSourceLight = document.getElementById("profile-source-light");
+
+    function updateProfilePicture() {
+        if (!profileImg || !profileSourceDark || !profileSourceLight) return;
+
+        var lightModeImg = "";
+        var darkModeImg = "";
+
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            profileImg.src = darkModeImg;
+            profileSourceDark.srcset = darkModeImg;
+            profileSourceLight.srcset = "";
+        } else {
+            body.classList.remove("dark-mode");
+            profileImg.src = lightModeImg;
+            profileSourceLight.srcset = lightModeImg;
+            profileSourceDark.srcset = "";
+        }
+    }
+
+    // ✅ Ensure Light Mode is Default on First Load
+    if (!localStorage.getItem("dark-mode")) {
+        localStorage.setItem("dark-mode", "disabled"); // Forces light mode on first visit
+    }
+
+    updateProfilePicture(); // ✅ Ensures correct profile image on page load
+
+    // Toggle dark mode on button click
+    toggleButton.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i> Night Mode';
+        }
+
+        updateProfilePicture(); // Ensure profile image switches
+    });
+
+    // Detect system theme change and update picture
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateProfilePicture);
+});
+
+</script>
+
 <body class="bg-light" data-spy="scroll" data-target="#navbar-year" data-offset="100">
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mb-5 shadow-sm">
     <div class="container-lg">
-        <a class="navbar-brand"><strong>Même si le vent se lève, la vie ne renonce jamais 🛫</strong></a>
+        <a class="navbar-brand" style="font-family: 'Great Vibes', cursive; "><strong>Même si le vent se lève, la vie ne renonce jamais 🛫</strong></a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-map"></i> Menu
         </button>
@@ -49,6 +105,10 @@
             </ul>
         </div>
     </div>
+
+<!--    <button id="dark-mode-toggle" class="btn btn-outline-dark ml-2">-->
+<!--    <i class="fas fa-moon"></i> Night Mode-->
+<!--    </button>-->
 </nav>
 
     <div class="container-lg">
@@ -319,7 +379,7 @@
             
                 
 <div class="d-none d-md-block">
-    <div class="row no-gutters  border-gray">
+    <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/2024_aaai.png" alt="Transient glimpses: unveiling occluded backgrounds through the spike camera" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
             <h5 class="mt-0 mb-1 font-weight-normal">Transient glimpses: unveiling occluded backgrounds through the spike camera</h5>
@@ -349,7 +409,7 @@
     </div>
 </div>
 
-<div class="row no-gutters d-md-none  border-gray  rounded-bottom lazy" data-src="/assets/pubpic/2024_aaai.png">
+<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/assets/pubpic/2024_aaai.png">
     <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
@@ -373,6 +433,61 @@
                     
                     
                     <a target="_blank" href="https://github.com/Leozhangjiyuan/SpikeDeOcclusion">[Code]</a>
+                    
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+            
+                
+<div class="d-none d-md-block">
+    <div class="row no-gutters  border-gray">
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/2024_cae_review.jpeg" alt="Spike-Based Vision for Autonomous Driving Scenarios" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
+        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+            <h5 class="mt-0 mb-1 font-weight-normal">Spike-Based Vision for Autonomous Driving Scenarios</h5>
+            <p class="mt-0 mb-0 small"><span class="text-body">
+            Jiyuan Zhang, </span><span class="text-body">
+            <strong>Yajing Zheng </strong>, </span><span class="text-body">
+            Zhaofei Yu, </span><span class="text-body">
+            Tiejun Huang<sup>&#9993;</sup></span>
+<mark>(<sup>&#9993;</sup> <i> corresponding author</i>)</mark></p>
+            <p class="mt-0 mb-0 small"><i><em> Strategic Study of CAE </em> (<strong>中国工程科学</strong>)</i> 2024 </p>
+            <p class="mt-0 mb-0 small text-muted"></p>
+            
+            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                
+                
+                <a target="_blank" href="https://www.engineering.org.cn/sscae/EN/10.15302/J-SSCAE-2024.01.012">[Paper]</a>
+                
+                
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters d-md-none  border-gray  rounded-bottom lazy" data-src="/assets/pubpic/2024_cae_review.jpeg">
+    <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
+        <div class="d-flex align-items-start flex-column py-3 px-4">
+            <div class="mb-auto"></div>
+            <div>
+                <h5 class="mt-0 mb-1 font-weight-normal">Spike-Based Vision for Autonomous Driving Scenarios</h5>
+                <p class="mt-0 mb-0 small"><span class="text-body">
+            Jiyuan Zhang, </span><span class="text-body">
+            <strong>Yajing Zheng </strong>, </span><span class="text-body">
+            Zhaofei Yu, </span><span class="text-body">
+            Tiejun Huang<sup>&#9993;</sup></span>
+<mark>(<sup>&#9993;</sup> <i> corresponding author</i>)</mark></p>
+                <p class="mt-0 mb-0 small"><i><em> Strategic Study of CAE </em> (<strong>中国工程科学</strong>)</i> 2024 </p>
+                <p class="mt-0 mb-0 small text-muted"></p>
+                
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    
+                    
+                    <a target="_blank" href="https://www.engineering.org.cn/sscae/EN/10.15302/J-SSCAE-2024.01.012">[Paper]</a>
                     
                     
                 </p>
@@ -540,6 +655,59 @@
             
                 
 <div class="d-none d-md-block">
+    <div class="row no-gutters border-bottom border-gray">
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/2023_csig_review.jpeg" alt="A literature review for neural networks-based encoding models of biological visual system (生物视觉系统的神经网络编码模型综述)" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
+        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+            <h5 class="mt-0 mb-1 font-weight-normal">A literature review for neural networks-based encoding models of biological visual system (生物视觉系统的神经网络编码模型综述)</h5>
+            <p class="mt-0 mb-0 small"><span class="text-body">
+            <strong> Yajing Zheng</strong>, </span><span class="text-body">
+            Zhaofei Yu, </span><span class="text-body">
+            Tiejun Huang<sup>&#9993;</sup></span>
+<mark>(<sup>&#9993;</sup> <i> corresponding author</i>)</mark></p>
+            <p class="mt-0 mb-0 small"><i><strong> Journal of Image and Graphics </strong></i> 2023 </p>
+            <p class="mt-0 mb-0 small text-muted"></p>
+            
+            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                
+                
+                <a target="_blank" href="http://cjig.ijournals.cn/jig/ch/reader/view_abstract.aspx?file_no=20230202">[Paper]</a>
+                
+                
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/assets/pubpic/2023_csig_review.jpeg">
+    <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
+        <div class="d-flex align-items-start flex-column py-3 px-4">
+            <div class="mb-auto"></div>
+            <div>
+                <h5 class="mt-0 mb-1 font-weight-normal">A literature review for neural networks-based encoding models of biological visual system (生物视觉系统的神经网络编码模型综述)</h5>
+                <p class="mt-0 mb-0 small"><span class="text-body">
+            <strong> Yajing Zheng</strong>, </span><span class="text-body">
+            Zhaofei Yu, </span><span class="text-body">
+            Tiejun Huang<sup>&#9993;</sup></span>
+<mark>(<sup>&#9993;</sup> <i> corresponding author</i>)</mark></p>
+                <p class="mt-0 mb-0 small"><i><strong> Journal of Image and Graphics </strong></i> 2023 </p>
+                <p class="mt-0 mb-0 small text-muted"></p>
+                
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    
+                    
+                    <a target="_blank" href="http://cjig.ijournals.cn/jig/ch/reader/view_abstract.aspx?file_no=20230202">[Paper]</a>
+                    
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+            
+                
+<div class="d-none d-md-block">
     <div class="row no-gutters  border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/reconstruction2022.png" alt="Capture the Moment: High-speed Imaging with Spiking Cameras through Short-term Plasticity" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
@@ -676,7 +844,7 @@
             <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
                 
                 
-                <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S2095809922002077">[Paper]</a>
+                <a target="_blank" href="https://www.cell.com/patterns/fulltext/S2666-3899(21)00205-1">[Paper]</a>
                 
                 
                 
@@ -707,7 +875,7 @@
                 <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
                     
                     
-                    <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S2095809922002077">[Paper]</a>
+                    <a target="_blank" href="https://www.cell.com/patterns/fulltext/S2666-3899(21)00205-1">[Paper]</a>
                     
                     
                     

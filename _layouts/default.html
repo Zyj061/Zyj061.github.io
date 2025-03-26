@@ -19,6 +19,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+    const profileImg = document.getElementById("profile-img");
+    const profileSourceDark = document.getElementById("profile-source-dark");
+    const profileSourceLight = document.getElementById("profile-source-light");
+
+    function updateProfilePicture() {
+        if (!profileImg || !profileSourceDark || !profileSourceLight) return;
+
+        var lightModeImg = "{{ site.data.profile.portrait_url_light | relative_url }}";
+        var darkModeImg = "{{ site.data.profile.portrait_url_dark | relative_url }}";
+
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            profileImg.src = darkModeImg;
+            profileSourceDark.srcset = darkModeImg;
+            profileSourceLight.srcset = "";
+        } else {
+            body.classList.remove("dark-mode");
+            profileImg.src = lightModeImg;
+            profileSourceLight.srcset = lightModeImg;
+            profileSourceDark.srcset = "";
+        }
+    }
+
+    // ✅ Ensure Light Mode is Default on First Load
+    if (!localStorage.getItem("dark-mode")) {
+        localStorage.setItem("dark-mode", "disabled"); // Forces light mode on first visit
+    }
+
+    updateProfilePicture(); // ✅ Ensures correct profile image on page load
+
+    // Toggle dark mode on button click
+    toggleButton.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i> Night Mode';
+        }
+
+        updateProfilePicture(); // Ensure profile image switches
+    });
+
+    // Detect system theme change and update picture
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateProfilePicture);
+});
+
+</script>
+
 <body class="bg-light" {{ page.body_attr }}>
     {% include navbar.html %}
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">

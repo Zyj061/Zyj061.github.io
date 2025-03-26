@@ -19,10 +19,66 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+    const profileImg = document.getElementById("profile-img");
+    const profileSourceDark = document.getElementById("profile-source-dark");
+    const profileSourceLight = document.getElementById("profile-source-light");
+
+    function updateProfilePicture() {
+        if (!profileImg || !profileSourceDark || !profileSourceLight) return;
+
+        var lightModeImg = "";
+        var darkModeImg = "";
+
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            profileImg.src = darkModeImg;
+            profileSourceDark.srcset = darkModeImg;
+            profileSourceLight.srcset = "";
+        } else {
+            body.classList.remove("dark-mode");
+            profileImg.src = lightModeImg;
+            profileSourceLight.srcset = lightModeImg;
+            profileSourceDark.srcset = "";
+        }
+    }
+
+    // ✅ Ensure Light Mode is Default on First Load
+    if (!localStorage.getItem("dark-mode")) {
+        localStorage.setItem("dark-mode", "disabled"); // Forces light mode on first visit
+    }
+
+    updateProfilePicture(); // ✅ Ensures correct profile image on page load
+
+    // Toggle dark mode on button click
+    toggleButton.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i> Night Mode';
+        }
+
+        updateProfilePicture(); // Ensure profile image switches
+    });
+
+    // Detect system theme change and update picture
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateProfilePicture);
+});
+
+</script>
+
 <body class="bg-light" >
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mb-5 shadow-sm">
     <div class="container-xl">
-        <a class="navbar-brand"><strong>Même si le vent se lève, la vie ne renonce jamais 🛫</strong></a>
+        <a class="navbar-brand" style="font-family: 'Great Vibes', cursive; "><strong>Même si le vent se lève, la vie ne renonce jamais 🛫</strong></a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-map"></i> Menu
         </button>
@@ -49,6 +105,10 @@
             </ul>
         </div>
     </div>
+
+<!--    <button id="dark-mode-toggle" class="btn btn-outline-dark ml-2">-->
+<!--    <i class="fas fa-moon"></i> Night Mode-->
+<!--    </button>-->
 </nav>
 
     <div class="container-xl">
@@ -62,24 +122,35 @@
     <div class="p-2 grid-item col-md-8 col-sm-12 col-12">
         <div class="card border-0 shadow-sm bg-white">
             <div class="p-4">
-    <h2>SpikeCV</h2>
+    <h2>SpikeCV⚡️</h2>
     <hr />
     <p>
      I'm leading <strong>SpikeCV</strong>, an open-source project designed for the emerging field of <em>spike camera</em> vision.  
      It brings together spiking datasets, reusable algorithms, and hardware interfaces — everything you need to explore fast, brain-inspired vision.  
      The goal is to build a community around spike-based computing and help researchers get from simulation to real-world deployment.
     </p>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&amp;display=swap" rel="stylesheet" />
     <p>
-         Thanks to the main colloborators! Jiyuan Zhang, Rui Zhao, Jianhao Ding, Shiyan Chen, Weijian Wu and Tiejun Huang. 💛 <br />
-    </p>
-    <p>
+        We are actively growing the SpikeCV community, aiming to bring together researchers, engineers, and enthusiasts working on spike-based vision systems.
         We’d love to have you on board if you’re interested — feel free to reach out and join us! ✨
     </p>
     <img class="lazy w-100 rounded-sm" src="/assets/images/covers/spikecv_logo.png" />
-    [<a href="https://spikecv.github.io">Website</a>]
-    [<a href="https://git.openi.org.cn/Cordium/SpikeCV">Openi-Git(CN)</a>]
-    [<a href="https://github.com/Zyj061/SpikeCV">Github</a>]
-    [<a href="https://arxiv.org/abs/2303.11684">PDF</a>]   
+    
+<p style="
+  font-family: 'Dancing Script', cursive;
+  font-size: 23px;
+  text-align: center;
+  color: #011627;
+">
+   Heartfelt thanks to my amazing collaborators: Jiyuan, Rui, Jianhao, Shiyan, Weijian <br /> &amp; Prof. Tiejun Huang. 💛
+</p>
+
+<p style="text-align: center">
+[<a href="https://spikecv.github.io">Website</a>]
+[<a href="https://git.openi.org.cn/Cordium/SpikeCV">Openi-Git(CN)</a>]
+[<a href="https://github.com/Zyj061/SpikeCV">Github</a>]
+[<a href="https://arxiv.org/abs/2303.11684">PDF</a>]
+</p>
 </div>
 
         </div>
@@ -90,11 +161,10 @@
             <div>
   <img data-src="https://api.star-history.com/svg?repos=Zyj061/SpikeCV&amp;type=Date" class="lazy w-100 rounded-top" src="/assets/images/empty_300x200.png" />
   <div class="card-body">
-    <h5 class="card-title">GitHub Star History</h5>
     <p class="card-text">
-      This image shows the star history of the GitHub repository of the SpikeCV.
+      The star history of the GitHub repository of the SpikeCV.<br />
+      <small><a href="https://github.com/Zyj061/SpikeCV" target="_blank">Give a star! 🌟</a></small>
     </p>
-    <p class="card-text"><small><a href="https://github.com/Zyj061/SpikeCV" target="_blank">Give a star! 🌟</a></small></p>
   </div>
 </div>
 
@@ -105,6 +175,9 @@
         <div class="card border-0 shadow-sm bg-white">
             <div>
    <img data-src="/assets/images/covers/spikecv.png" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png" />
+  <div class="card-body">
+    <h6>the SpikeCV ecosystem.</h6>
+  </div>
 </div>
 
         </div>
@@ -118,10 +191,10 @@
     
     <div class="p-2 grid-item col-md-12 col-sm-12 col-12">
         <div class="card border-0 shadow-sm bg-white">
-            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; max-width: 900px; margin: 2rem auto;">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; max-width: 900px; margin: 0.5rem auto;">
   <!-- 左侧文本内容 -->
-  <div class="p-4" style="flex: 1;">
-    <p>I am currently the principal investigator (PI) of the following projects and fellowships:</p>
+  <div class="p-4" style="flex: 1.5;">
+    <h6>I am currently the principal investigator (PI) of the following projects and fellowships:</h6>
     <ul style="line-height: 1.8; list-style: none; padding-left: 0;">
         <li>📌 The National Natural Science Foundation (NSFC) of China for Young Scientists</li>
         <li>🎯 The 9th China Association for Science and Technology Youth Talent Support Project</li>
@@ -133,7 +206,7 @@
   </div>
 
   <!-- 右侧圆形头像 -->
-  <div style="flex-shrink: 0; margin-top: 8px;">
+  <div style="flex-shrink: 0; margin-top: 25px;">
     <img src="assets/images/photos/yjzheng.jpg" alt="Profile photo" style="width: 160px; height: 200px; border-radius: 80%; object-fit: cover; box-shadow: 1px 2px 6px rgba(0,0,0,0.15);" />
   </div>
 </div>

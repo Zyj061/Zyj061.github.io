@@ -6,10 +6,10 @@ group: Grants
 
 ---
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; max-width: 900px; margin: 2rem auto;">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; max-width: 900px; margin: 0.5rem auto;">
   <!-- 左侧文本内容 -->
-  <div class="p-4" style="flex: 1;">
-    <p>I am currently the principal investigator (PI) of the following projects and fellowships:</p>
+  <div class="p-4" style="flex: 1.5;">
+    <h6>I am currently the principal investigator (PI) of the following projects and fellowships:</h6>
     <ul style="line-height: 1.8; list-style: none; padding-left: 0;">
         <li>📌 The National Natural Science Foundation (NSFC) of China for Young Scientists</li>
         <li>🎯 The 9th China Association for Science and Technology Youth Talent Support Project</li>
@@ -21,7 +21,7 @@ group: Grants
   </div>
 
   <!-- 右侧圆形头像 -->
-  <div style="flex-shrink: 0; margin-top: 8px;">
+  <div style="flex-shrink: 0; margin-top: 25px;">
     <img src="assets/images/photos/yjzheng.jpg" alt="Profile photo"
          style="width: 160px; height: 200px; border-radius: 80%; object-fit: cover; box-shadow: 1px 2px 6px rgba(0,0,0,0.15);" />
   </div>
