@@ -7,7 +7,7 @@
     <title>Homepage - Même si le vent se lève, la vie ne renonce jamais 🛫</title>
 
     <!-- Website Logo -->
-    <link rel="icon" href="/homepage/assets/images/photos/simba.JPG" type="image/png">
+    <link rel="icon" href="/assets/images/photos/simba.JPG" type="image/png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="/homepage/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 </head>
 <body class="bg-light" >
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mb-5 shadow-sm">
@@ -31,19 +31,19 @@
             <ul class="navbar-nav ml-auto">
                 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/homepage/">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/homepage/publications">Publications</a>
+                    <a class="nav-link" href="/publications">Publications</a>
                 </li>
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/homepage/projects">Projects</a>
+                    <a class="nav-link" href="/projects">Projects</a>
                 </li>
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/homepage/honors">Honors</a>
+                    <a class="nav-link" href="/honors">Honors</a>
                 </li>
                 
             </ul>
@@ -62,7 +62,7 @@
                         <!-- When the screen is wider than md, float the portrait on the right -->
                         <div class="figure float-right ml-4 mb-4 d-none d-md-block">
                             <img 
-                                src="/homepage/assets/images/photos/yjzheng2.jpeg" 
+                                src="/assets/images/photos/yjzheng2.jpeg" 
                                 class="figure-img img-fluid img-thumbnail" 
                                 style="height: 200px;"
                                 data-toggle="tooltip" 
@@ -77,18 +77,18 @@
                             </div>
                             
                             <div class="ml-auto d-md-none">
-                                <a target="_blank" href="/homepage/assets/images/photos/yjzheng2.jpeg">
-                                    <img src="/homepage/assets/images/photos/yjzheng2.jpeg" class="rounded-circle" style="height: 48px;" alt="Portrait">
+                                <a target="_blank" href="/assets/images/photos/yjzheng2.jpeg">
+                                    <img src="/assets/images/photos/yjzheng2.jpeg" class="rounded-circle" style="height: 48px;" alt="Portrait">
                                 </a>
                             </div>
                             
                         </div>
                         <div class="text-profile-position">
                             
-                            <img src="/homepage/assets/images/badges/PKU_red.png" alt="Logo" class="inline-badge"/>
+                            <img src="/assets/images/badges/PKU_red.png" alt="Logo" class="inline-badge"/>
                             Peking University<br/>
                             
-                            <img src="/homepage/assets/images/badges/ucl_black.png" alt="Logo" class="inline-badge"/>
+                            <img src="/assets/images/badges/ucl_black.png" alt="Logo" class="inline-badge"/>
                             University College London<br/>
                             
                         </div>
@@ -174,7 +174,7 @@ if (location.hostname.search("github.io") != -1 && striped_pathname != ""){
             <h5><i class="fas fa-exclamation-triangle"></i> Action required</h5>
             <strong>Problem:</strong>
             The current root path of this site is "<code class="root-path-text"></code>",
-            which does not match the <code>baseurl</code> ("<code>/homepage</code>") configured in <code>_config.yml</code>.
+            which does not match the <code>baseurl</code> ("<code></code>") configured in <code>_config.yml</code>.
             <br>
 
             <strong>Solution:</strong>
@@ -185,7 +185,7 @@ if (location.hostname.search("github.io") != -1 && striped_pathname != ""){
 
 <script>
 striped_pathname = location.pathname.replace(/\/+$/, "");
-if(striped_pathname != "/homepage"){
+if(striped_pathname != ""){
     document.getElementById("url-debug-message").classList.remove('d-none');
 }
 document.querySelectorAll(".root-path-text").forEach(function(element){
@@ -207,7 +207,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                             <ul class="list-unstyled mb-1">
                                 
                                 <li class="media mb-1">
-                                    <img src="/homepage/assets/images/badges/PKU_red.png" alt="Peking University" style="width: 18px;" class="mr-1 mt-1">
+                                    <img src="/assets/images/badges/PKU_red.png" alt="Peking University" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
                                         <div>Peking University</div>
                                         <div class="small"></div>
@@ -219,7 +219,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                                 </li>
                                 
                                 <li class="media mb-1">
-                                    <img src="/homepage/assets/images/badges/SCU_red.png" alt="Sichuan University" style="width: 18px;" class="mr-1 mt-1">
+                                    <img src="/assets/images/badges/SCU_red.png" alt="Sichuan University" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
                                         <div>Sichuan University</div>
                                         <div class="small"></div>
@@ -242,7 +242,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                             <ul class="list-unstyled mb-1">
                                 
                                 <li class="media mb-1">
-                                    <img src="/homepage/assets/images/badges/ucl_black.png" alt="University College London" style="width: 18px;" class="mr-1 mt-1">
+                                    <img src="/assets/images/badges/ucl_black.png" alt="University College London" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
                                         <div>University College London</div>
                                         <div class="small"></div>
@@ -254,7 +254,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                                 </li>
                                 
                                 <li class="media mb-1">
-                                    <img src="/homepage/assets/images/badges/PKU_red.png" alt="Peking University (PKU)" style="width: 18px;" class="mr-1 mt-1">
+                                    <img src="/assets/images/badges/PKU_red.png" alt="Peking University (PKU)" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
                                         <div>Peking University (PKU)</div>
                                         <div class="small"></div>
@@ -341,13 +341,13 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
 <div class="my-3 p-0 bg-white shadow-sm rounded-sm">
     <h6 class="border-bottom border-gray p-3 mb-0">
         <i class="fas fa-star"></i> Selected Publications 
-        <a href="/homepage/publications">(view all <i class="fas fa-angle-double-right"></i>)</a>
+        <a href="/publications">(view all <i class="fas fa-angle-double-right"></i>)</a>
     </h6>
     
         
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/homepage/assets/pubpic/2024_neurips_spikecmax.png" alt="Continuous Spatiotemporal Events Decoupling through Spike-based Bayesian Computation" class="lazy w-100 rounded-sm" src="/homepage/assets/images/empty_300x200.png"></div>
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/2024_neurips_spikecmax.png" alt="Continuous Spatiotemporal Events Decoupling through Spike-based Bayesian Computation" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
             <h5 class="mt-0 mb-1 font-weight-normal">Continuous Spatiotemporal Events Decoupling through Spike-based Bayesian Computation</h5>
             <p class="mt-0 mb-0 small"><span class="text-body">
@@ -371,7 +371,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
     </div>
 </div>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/homepage/assets/pubpic/2024_neurips_spikecmax.png">
+<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/assets/pubpic/2024_neurips_spikecmax.png">
     <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
@@ -402,7 +402,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/homepage/assets/pubpic/2024_neurips_deblur.png" alt="Spikereveal: Unlocking temporal sequences from real blurry inputs with spike streams" class="lazy w-100 rounded-sm" src="/homepage/assets/images/empty_300x200.png"></div>
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/2024_neurips_deblur.png" alt="Spikereveal: Unlocking temporal sequences from real blurry inputs with spike streams" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
             <h5 class="mt-0 mb-1 font-weight-normal">Spikereveal: Unlocking temporal sequences from real blurry inputs with spike streams</h5>
             <p class="mt-0 mb-0 small"><span class="text-body">
@@ -433,7 +433,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
     </div>
 </div>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/homepage/assets/pubpic/2024_neurips_deblur.png">
+<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/assets/pubpic/2024_neurips_deblur.png">
     <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
@@ -471,7 +471,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/homepage/assets/pubpic/reconstruction2022.png" alt="Capture the Moment: High-speed Imaging with Spiking Cameras through Short-term Plasticity" class="lazy w-100 rounded-sm" src="/homepage/assets/images/empty_300x200.png"></div>
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/pubpic/reconstruction2022.png" alt="Capture the Moment: High-speed Imaging with Spiking Cameras through Short-term Plasticity" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
             <h5 class="mt-0 mb-1 font-weight-normal">Capture the Moment: High-speed Imaging with Spiking Cameras through Short-term Plasticity</h5>
             <p class="mt-0 mb-0 small"><span class="text-body">
@@ -495,7 +495,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
     </div>
 </div>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/homepage/assets/pubpic/reconstruction2022.png">
+<div class="row no-gutters d-md-none border-bottom border-gray   lazy" data-src="/assets/pubpic/reconstruction2022.png">
     <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
@@ -524,7 +524,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
 </div>    
     
     <h6 class="d-block p-3 mt-0 text-right">
-        <a href="/homepage/publications">All publications <i class="fas fa-angle-double-right"></i></a>
+        <a href="/publications">All publications <i class="fas fa-angle-double-right"></i></a>
     </h6>
 </div>
 
@@ -571,7 +571,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
             });
         });
     </script>
-    <script src="/homepage/assets/js/common.js"></script>
-    <script src="/homepage/assets/js/bubble_visual_hash.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/bubble_visual_hash.js"></script>
 </body>
 </html>

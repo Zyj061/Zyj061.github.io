@@ -39,3 +39,6 @@ collections:
   - news
   - projects
   - honors
+
+include:
+  - assets
