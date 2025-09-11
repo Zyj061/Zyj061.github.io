@@ -1,7 +1,7 @@
 ---
 title:          "Spikereveal: Unlocking temporal sequences from real blurry inputs with spike streams"
 date:           2024-12-16 00:01:00 +0800
-selected:       true
+selected: false
 pub:           <em> Advances in Neural Information Processing Systems </em> (<strong> NeurIPS </strong>) 
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

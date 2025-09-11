@@ -14,25 +14,28 @@ date: 2020-01-12 00:01:00 +0800
     <li>ACM Member</li>
   </ul>
 
-  <h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Program Committee Member / Reviewer</h6>
-  <ul style="line-height: 1.8; font-size: 16px; padding-left: 1.2rem;">
-    <li>NeurIPS</li>
-    <li>AAAI</li>
-    <li>ICLR</li>
-    <li>ACM Multimedia</li>
-    <li>ICML</li>
-    <li>ECCV</li>
-    <li>CVPR</li>
-    <li>ICCV</li>
-    <li>ACCV</li>
-  </ul>
+<h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Program Committee Member / Reviewer</h6>
+<ul style="line-height: 1.8; font-size: 16px; padding-left: 1.2rem;">
+  <li>Area Chair, CVPR 2026 (Reviewer in previous years)</li>
+  <li>NeurIPS</li>
+  <li>AAAI</li>
+  <li>ICLR</li>
+  <li>ACM Multimedia</li>
+  <li>ICML</li>
+  <li>ECCV</li>
+  <li>ICCV</li>
+  <li>ACCV</li>
+</ul>
 
-  <h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Journal / Transactions Reviewer</h6>
-  <ul style="line-height: 1.8; font-size: 16px; padding-left: 1.2rem;">
-    <li>IEEE Transactions on Image Processing (TIP)</li>
-    <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
-    <li>ACM Journal on Autonomous Transportation Systems</li>
-    <li>Elsevier Neural Networks</li>
-    <li>Artificial Intelligence Review</li>
-  </ul>
+<h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Journal / Transactions Reviewer</h6>
+<ul style="line-height: 1.8; font-size: 16px; padding-left: 1.2rem;">
+  <li>Nature Human Behaviour</li>
+  <li>IEEE Transactions on Image Processing (TIP)</li>
+  <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+  <li>Knowledge-Based Systems</li>
+  <li>Engineering Applications of Artificial Intelligence (EAAI)</li>
+  <li>Artificial Intelligence Review</li>
+  <li>Elsevier Neural Networks</li>
+  <li>ACM Journal on Autonomous Transportation Systems</li>
+</ul>
 </div>
