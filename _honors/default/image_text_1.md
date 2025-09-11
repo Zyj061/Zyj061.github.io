@@ -12,6 +12,8 @@ date: 2020-01-12 00:01:00 +0800
     <li>Deputy Secretary-Brain-Inspired Vision Committee, Chinese Society of Image and Graphics (CSIG)</li>
     <li>IEEE Member</li>
     <li>ACM Member</li>
+    <li>CCF Member</li>
+    <li>CAAI Member</li>
   </ul>
 
 <h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Program Committee Member / Reviewer</h6>
