@@ -41,10 +41,8 @@ date: 2020-01-12 00:01:00 +0800
   <li>Nature Human Behaviour</li>
   <li>IEEE Transactions on Image Processing (TIP)</li>
   <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
-  <li>Knowledge-Based Systems</li>
-  <li>Engineering Applications of Artificial Intelligence (EAAI)</li>
   <li>Artificial Intelligence Review</li>
-  <li>Elsevier Neural Networks</li>
+  <li>Neural Networks</li>
   <li>ACM Journal on Autonomous Transportation Systems</li>
 </ul>
 </div>
