@@ -17,9 +17,11 @@ date: 2020-01-12 00:01:00 +0800
   </ul>
 
 <h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Area Chair</h6>
-<li>CVPR 2027, 2026</li>
-<li>ICLR 2027</li>
-<li>WACV 2027</li>
+<ul style="line-height: 1.8; font-size: 16px; padding-left: 1.2rem;">
+  <li>CVPR 2027, 2026</li>
+  <li>ICLR 2027</li>
+  <li>WACV 2027</li>
+</ul>
 
 <h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Program Committee Member / Reviewer</h6>
 <ul style="line-height: 1.8; font-size: 16px; padding-left: 1.2rem;">
