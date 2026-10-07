@@ -17,7 +17,7 @@ date: 2020-01-12 00:01:00 +0800
   </ul>
 
 <h6 style="margin: 1.5rem 0 0.5rem; font-weight: bold;">Area Chair</h6>
-<li>CVPR 2027, 2026</li>>
+<li>CVPR 2027, 2026</li>
 <li>ICLR 2027</li>
 <li>WACV 2027</li>
 
